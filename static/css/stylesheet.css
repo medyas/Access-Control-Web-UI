@@ -1,0 +1,272 @@
+/*
+	fonts
+*/
+@font-face {
+font-family: "Lora";
+src: url("fonts/Lora-Bold.ttf");
+src:url("fonts/Lora-Light.ttf") ;
+src:url("fonts/Lora-Regular.ttf");
+}
+
+@font-face {
+font-family: "Dancing Script";
+src: url("fonts/DancingScript-Bold.ttf");
+src:url("fonts/DancingScript-Regular.ttf");
+}
+
+/*
+# ------------------------------------------------------------------------------- #
+*/
+
+/*
+	index.html ************* login page
+*/
+
+#login-form {
+	margin: 10% auto;
+	padding: 3%;
+	border-radius: 5px;
+	border: 1px solid #80dfff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#login-form button {
+	border-color: #80dfff;
+	background-color: #0086b3;
+}
+
+#login-form label {
+	color: #006080;
+}
+
+#btn {
+	display: inline-block;
+}
+
+.loader {
+	margin: 0 auto;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #0086b3; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*
+	header.html ************* navbar and main menu
+*/
+
+nav a {
+	color: white !important;
+}
+.nav-link:hover {
+	color: #e6faff !important;
+	border-bottom: 1px solid #28A745;
+}
+
+/*
+# ------------------------------------------------------------------------------- #
+*/
+
+/*
+	main menu
+*/
+/* Extra small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 575.98px) {
+	.menuList {
+		height: 100px;
+	}
+	.menuList h1 {
+		font-size: 20px;
+	}
+	.menuList i{
+		font-size: 30px;
+		display: block;
+	}
+}
+
+/* Small devices (landscape phones, less than 768px )*/
+@media (max-width: 767.98px) {
+	.menuList {
+		height: 120px;
+	}
+	.menuList h1 {
+		font-size: 25px;
+	}
+	.menuList i{
+		font-size: 35px;
+	}
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+	.menuList {
+		height: 130px;
+	}
+	.menuList h1 {
+		font-size: 30px;
+	}
+	.menuList i{
+		font-size: 45px;
+	}
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+	.menuList {
+		height: 160px;
+	}
+	.menuList h1 {
+		font-size: 32px;
+	}
+	.menuList i{
+		font-size: 50px;
+	}
+}
+/* Large desktops */
+@media (min-width: 1200px) {
+	.menuList {
+		height: 180px;
+	}
+	.menuList h1 {
+		font-size: 34px;
+	}
+	.menuList i{
+		font-size: 60px;
+	}
+}
+#menu {
+	margin: 10% auto;
+	text-align: center;
+}
+.menuList {
+	display: inline-block;
+	background-color: white;
+	margin: 1%;
+	padding: 2%;
+	text-align: center;
+	color: #17A2B8;
+	overflow: hidden;
+	font-family: 'Lora', serif;
+	border-radius: 5px;
+	border: 1px solid #80dfff;
+}
+.menuList h1 {
+}
+.menuList i{
+	display: block;
+}
+
+.menuList:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-decoration: none;
+	background-color: #005266;
+	color: white;
+}
+
+/* Open the sidenav */
+ /* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #008fb3; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav .closebtn {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav .closebtn:hover {
+    color: #006680;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav .closebtn {font-size: 18px;}
+}
+
+/*
+# ------------------------------------------------------------------------------- #
+*/
+
+/*
+	dashboard styles
+*/
+
+
+/*
+# ------------------------------------------------------------------------------- #
+*/
+
+/*
+	footer styles
+*/
+
+footer {
+    height: 100px;
+    background-color: #17A2B8;
+    color: white;
+    text-align: center;
+    font-size: 110%;
+    font-family: 'Aref Ruqaa', serif;
+}
+footer ul {
+	margin-bottom: 0px !important;
+	margin: 0px auto;
+}
+footer li {
+    display: inline-block;
+    margin: 3px;
+    padding: 5px;
+    margin-top: 15px;
+}
+footer li:hover {
+	color: #e6faff !important;
+	border-bottom: 1px solid #008fb3;
+}
+footer a {
+    color: white;
+}
+footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+footer span {
+    font-family: 'Dancing Script', cursive;
+}
