@@ -19,8 +19,143 @@ src:url("fonts/DancingScript-Regular.ttf");
 */
 
 /*
+	default form styles
+*/
+section #dForm {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+padding: 5%;
+color: #006680;
+border-radius: 5px;
+}
+.btn-primary {
+background-color: #006680;
+color: white;
+border-color: #17A2B8;
+}
+.btn-primary:hover {
+background-color: white;
+color: #006680;
+border-color: #17A2B8;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 575.98px) {
+	.menuList {
+		height: 100px;
+	}
+	.menuList h1 {
+		font-size: 20px;
+	}
+	.menuList i{
+		font-size: 30px;
+		display: block;
+	}
+	/* auto complete menu */
+	input['type=search'] {
+		width: 100%;
+	}
+	/* dashboard */
+	.filter input {
+		margin-bottom: 2%;
+	}
+	.filter {
+		height: 180px;
+	}
+}
+
+/* Small devices (landscape phones, less than 768px )*/
+@media screen and (min-width: 576px) and (max-width: 767px) {
+	.menuList {
+		height: 120px;
+	}
+	.menuList h1 {
+		font-size: 25px;
+	}
+	.menuList i{
+		font-size: 35px;
+	}
+		/* dashboard */
+	.filter input {
+		margin-bottom: 2%;
+	}
+	.filter {
+		height: 150px;
+	}
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.menuList {
+		height: 130px;
+	}
+	.menuList h1 {
+		font-size: 30px;
+	}
+	.menuList i{
+		font-size: 45px;
+	}
+	/* dashboard */
+	.filter input {
+		margin-bottom: 2%;
+	}
+	.filter {
+		height: 100px;
+	}
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	.menuList {
+		height: 160px;
+	}
+	.menuList h1 {
+		font-size: 32px;
+	}
+	.menuList i{
+		font-size: 50px;
+	}
+	/* dashboard */
+	.filter input {
+		margin-bottom: 1%;
+	}
+
+}
+/* Large desktops */
+@media screen and (min-width: 1200px) {
+	.menuList {
+		height: 180px;
+	}
+	.menuList h1 {
+		font-size: 34px;
+	}
+	.menuList i{
+		font-size: 60px;
+	}
+	.filter {
+		height: 60px;
+	}
+}
+
+/*
+# ------------------------------------------------------------------------------- #
+*/
+
+
+/*
 	index.html ************* login page
 */
+
+
+#logo {
+	width: 100%;
+	height: 30px;
+	background-color: #006680;
+	font-family: 'Dancing Script', cursive;
+	border-radius: 5px;
+	margin-bottom: 1%;
+	text-align: center;
+	color: white; 
+}
 
 #login-form {
 	margin: 10% auto;
@@ -46,7 +181,7 @@ src:url("fonts/DancingScript-Regular.ttf");
 .loader {
 	margin: 0 auto;
     border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #0086b3; /* Blue */
+    border-top: 16px solid #17A2B8; /* #0086b3 Blue */
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -57,7 +192,9 @@ src:url("fonts/DancingScript-Regular.ttf");
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
+/*
+# ------------------------------------------------------------------------------- #
+*/
 /*
 	header.html ************* navbar and main menu
 */
@@ -69,78 +206,99 @@ nav a {
 	color: #e6faff !important;
 	border-bottom: 1px solid #28A745;
 }
+.navbar-toggler {
+	color: white !important;
+	border-color: white !important;
+}
+.navbar-toggler-icon {
+color: white;
+}
+
+/* search auto complete styles */
+
+.auto-item {
+	width: 100%;
+}
+.auto-item img {
+	width: 45px;
+	height: 45px;
+	display: inline !important;
+}
+.auto-item div {
+	float: right;
+	padding-right: 20%;
+	display: inline !important;
+}
+.auto-item p {
+	margin-bottom: 0px;
+}
+.auto-item span {
+	display: block;
+	color: gray;
+	font-size: 80%;
+}
 
 /*
 # ------------------------------------------------------------------------------- #
 */
+/*
+	modal style
+*/
+#empInfo {
+	margin: 0px auto;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+height: 180px;
+}
+#empInfo #img {
+	display: inline-block;
+}
+#img img {
+	margin-top: 0px;
+	width: 100%;
+	border-radius: 5px
+}
+#info {
+	display: inline-block;
+	padding: 15px;
+}
+#empInfo p {
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+#name {
+	font-size: 120%;
+	color: #006680;
+}
+#address {
+	color: #17A2B8;
+}
+#card_uid {
+	color: gray;
+	font-size: 90%;
+}
+#logs {
+	margin-top: 15px;
+}
+#logs table tr, #logs table th {
+	width: 25%;
+	text-align: center;
+}
+#logs table th {
+	border-bottom: 1px solid gray;
+	color: #006680;
+}
+#logs table tr:hover {
+	background-color: #f6f6f6;
+	color: #17A2B8;
+}
 
+/*
+# ------------------------------------------------------------------------------- #
+*/
 /*
 	main menu
 */
-/* Extra small devices (portrait phones, less than 576px) */
-@media screen and (max-width: 575.98px) {
-	.menuList {
-		height: 100px;
-	}
-	.menuList h1 {
-		font-size: 20px;
-	}
-	.menuList i{
-		font-size: 30px;
-		display: block;
-	}
-}
 
-/* Small devices (landscape phones, less than 768px )*/
-@media (max-width: 767.98px) {
-	.menuList {
-		height: 120px;
-	}
-	.menuList h1 {
-		font-size: 25px;
-	}
-	.menuList i{
-		font-size: 35px;
-	}
-}
-
-/* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {
-	.menuList {
-		height: 130px;
-	}
-	.menuList h1 {
-		font-size: 30px;
-	}
-	.menuList i{
-		font-size: 45px;
-	}
-}
-
-/* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {
-	.menuList {
-		height: 160px;
-	}
-	.menuList h1 {
-		font-size: 32px;
-	}
-	.menuList i{
-		font-size: 50px;
-	}
-}
-/* Large desktops */
-@media (min-width: 1200px) {
-	.menuList {
-		height: 180px;
-	}
-	.menuList h1 {
-		font-size: 34px;
-	}
-	.menuList i{
-		font-size: 60px;
-	}
-}
 #menu {
 	margin: 10% auto;
 	text-align: center;
@@ -229,6 +387,44 @@ nav a {
 	dashboard styles
 */
 
+.filter {
+	margin: 2% auto;
+	padding: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.filter form {
+	margin: 0px auto;
+}
+.filter span {
+	font-weight: bold;
+	color: #006680;
+}
+#dashLogs {
+	margin: 15px 0px;
+}
+#dashLogs table tr, #logs table th {
+	width: 25%;
+	text-align: center;
+}
+#dashLogs table th {
+	border-bottom: 1px solid gray;
+	color: #006680;
+}
+#dashLogs table tr:hover {
+	background-color: #f6f6f6;
+	color: #17A2B8;
+}
+
+# ------------------------------------------------------------------------------- #
+*/
+
+/*
+	add User styles
+*/
+
+#dForm label{
+	color: #006680;
+}
 
 /*
 # ------------------------------------------------------------------------------- #
