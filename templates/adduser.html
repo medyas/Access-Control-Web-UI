@@ -1,3 +1,84 @@
-<section style="height:100px;">
+<section class="col-10 col-sm-10 col-md-8 col-xl-6" style="margin: 5% auto">
+<div id="dForm">
+	<div class="alert alert-success" style="display:none;" role="alert">User successfully added!</div>
+	<div class="alert alert-danger" style="display:none;" role="alert">Unable to add User</div>
+	<div class="loader" style="display:none;"></div>
+	
+	<form id="valForm" class="needs-validation" novalidate>
+	  <div class="form-row">
+	    <div class="col-md-5 mb-3">
+	      <label for="firstname">First name</label>
+	      <input type="text" class="form-control" name="firstname" minlength=3 id="firstname" placeholder="First name" required>
+	      <div class="invalid-feedback">
+	        Please provide your firstname
+	      </div>
+	    </div>
+	    <div class="col-md-5 mb-3">
+	      <label for="lastname">Last name</label>
+	      <input type="text" class="form-control" id="lastname" minlength=3 name="lastname" placeholder="Last name" required>
+	      <div class="invalid-feedback">
+	        Please provide your lastname
+	      </div>
+	    </div>
+	    <div class="col-md-5 mb-3">
+	      <label for="username">Username</label>
+	      <div class="input-group">
+	        <div class="input-group-prepend">
+	          <span class="input-group-text" id="inputGroupPrepend">@</span>
+	        </div>
+	        <input type="text" class="form-control" id="username" name="username" minlength=6 placeholder="Username" aria-describedby="inputGroupPrepend" required>
+	        <div class="invalid-feedback">
+	          Please choose a username.
+	        </div>
+	      </div>
+	    </div>
 
+	    <div class="col-md-6 mb-3">
+	      <label for="email">Email</label>
+	      <input type="email" class="form-control" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" placeholder="Email address" required>
+	      <div class="invalid-feedback">
+	        Please provide a valid Email address.
+	      </div>
+	    </div>
+	    <div class="col-md-5 mb-3">
+	      <label for="password">Password</label>
+	      <input type="password" class="form-control" name="password" minlength=6 id="password" placeholder="Password" required>
+	      <div class="invalid-feedback">
+	        Please provide a valid password.
+	      </div>
+	    </div>
+	    <div class="col-md-5 mb-3">
+	      <label for="passConfirm">Confirmation</label>
+	      <input type="password" class="form-control" name="passConfirm" minlength=6 id="passConfirm" placeholder="Confirmation" required>
+	      <div class="invalid-feedback">
+	        Please type in the same password.
+	      </div>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="form-check">
+	      <label class="form-check-label" for="invalidCheck">
+	        Permissions: 
+	      </label></br>
+		<div class="form-check form-check-inline">
+		  <input class="form-check-input" name="edit" type="checkbox" value="" id="edit">
+		  <label class="form-check-label" for="inlineCheckbox1">Edit</label>
+		</div>
+		<div class="form-check form-check-inline">
+		  <input class="form-check-input" name="add" type="checkbox" value="" id="add">
+		  <label class="form-check-label" for="inlineCheckbox2">Add</label>
+		</div>
+		<div class="form-check form-check-inline">
+		  <input class="form-check-input" name="block" type="checkbox" value="" id="block">
+		  <label class="form-check-label" for="inlineCheckbox3">Block</label>
+		</div>
+	      	<div class="form-check form-check-inline">
+		  <input class="form-check-input" name="delete" type="checkbox" value="" id="delete">
+		  <label class="form-check-label" for="inlineCheckbox3">Delete</label>
+		</div>
+	    </div>
+	  </div>
+	  <div style="display:inline-block;" class="col-4 col-sm-6 col-md-8 col-xl-10"></div><button class="btn btn-primary" type="submit">Add User</button>
+	</form>
+</div>
 </section>

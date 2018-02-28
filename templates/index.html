@@ -12,7 +12,7 @@
 
     <link href="../static/css/fontawesome-all.css" rel="stylesheet">
 
-<script type="text/javascript" src="../static/js/javascript.js"></script>
+<script type="text/javascript" src="../static/js/index.js"></script>
 <link rel="stylesheet" href="../static/css/stylesheet.css" type="text/css" />
 
 
@@ -21,13 +21,15 @@
   	<section>
   		<div id="login-form" class="col-10 col-sm-8 col-md-6 col-xl-3">
   		  <div style="display:none;" class="loader"></div>
+			
   			<form id="valForm" novalidate>
+<div id="logo">Iset Rades</div>
   			  <div id="wrong" class="alert alert-danger" role="alert" style="display:none;">
                 Wrong Username or Password, please recheck you input.
           </div>
   				<div class="form-group">
 				    <label for="username">Username</label></br>
-				    <input type="text" name="username" title="Your username" minlength=6 required class="form-control" id="username"  placeholder="Username">
+				    <input type="text" autofocus name="username" title="Your username" minlength=6 required class="form-control" id="username"  placeholder="Username">
 				    <div class="invalid-feedback">
               Please provide a valid username.
             </div>

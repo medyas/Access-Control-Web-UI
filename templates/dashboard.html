@@ -1,3 +1,33 @@
-<section style="height:100px;">
-
+<section>
+	<div class="col-10 filter">
+		 <form>
+			  <div class="row">
+			    <div class="col-6 col-sm-3 col-md-2 col-xl-1">
+			      <span>Sort By: </span>
+			    </div>
+			    <div class="col-10 col-sm-8 col-md-4 col-xl-3">
+			      <input type="date" id="dashDate" max="" class="form-control" name="date">
+			    </div>
+			    <div class="col-10 col-sm-8 col-md-4 col-xl-3">
+			      <input type="text" id="dashSearch" name="search" class="form-control" placeholder="Employee Name">
+			    </div>
+			    <div class="col-10 col-sm-8 col-md-4 col-xl-3">
+			      <input type="number" pattern="\d*" max-length=8 id="dashUid" name="uid" class="form-control" placeholder="Card UID">
+			    </div>
+			  </div>
+		 </form> 
+	</div>
+	<div id="dashLogs">
+		 <table style="width:100%">
+		  <tr>
+		    <th>User Id</th>
+		    <th>User Name</th>
+		    <th>User Card UID</th>
+		    <th>Scan Id</th>
+		    <th>Scan Date</th>
+		    <th>Scan Time</th>
+		  </tr>
+		</table> 
+		<div class="loader" style="display:none;"></div>
+	</div>
 </section>
