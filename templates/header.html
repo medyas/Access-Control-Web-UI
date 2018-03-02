@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
 
@@ -18,6 +18,7 @@
 <script type="text/javascript" src="../static/js/javascript.js"></script>
 <link rel="stylesheet" href="../static/css/stylesheet.css" type="text/css" />
 
+<title>Access Control</title>
 
   </head>
     <body>
@@ -34,14 +35,15 @@
       </div>
       <div class="modal-body">
 	 <div class="loader"></div> 
-         <div id="empInfo">
-   			<div id="img" class="col-10 col-sm-8 col-md-4 col-xl-3">
-   				<img src="">
+         <div id="empInfo" class="clearfix">
+   			<div id="img" class="float-left col-6 col-sm-5 col-md-4 col-xl-3">
+   				<img class="rounded" src="">
    			</div>
-   			<div id="info" class="col-12 col-sm-10 col-md-7 col-xl-8">
+   			<div id="info" class="float-right col-12 col-sm-6 col-md-7 col-xl-8">
    				<p id="name"></p>
    				<p id="address"></p>
    				<p id="card_uid"></p>
+				<p style="text-align: center;" id="status"></p>
    			</div>
    	 </div>
 	<div id="logs">
@@ -84,44 +86,44 @@
                 <a class="nav-link" href="{{ url_for('logout') }}">LogOut <i class="fas fa-sign-out-alt"></i></a>
               </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-8" type="search" id="search" placeholder="Search By Name" aria-label="Search">
-            </form>
 
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search By Name" aria-label="Search">
+    </form>
             </div>
         </nav>
 
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <div id="menu" class="col-10 col-sm-10 col-md-8 col-xl-6">
-                <a href="{{ url_for('dashboard') }}" class="menuList col-10 col-sm-6 col-md-4 col-xl-3">
+          <div id="menu" class="col-12 col-sm-10 col-md-8 col-xl-6">
+                <a href="{{ url_for('dashboard') }}" class="menuList col-10 col-sm-5 col-md-4 col-xl-3">
                       <h1>Dashboard</h1> <i class="fas  fa-home"></i>
                 </a>
-                <a href="{{ url_for('adduser') }}" class="menuList col-10 col-sm-6 col-md-4 col-xl-3">
+                <a href="{{ url_for('adduser') }}" class="menuList col-10 col-sm-5 col-md-4 col-xl-3">
                       <h1>Add User</h1> <i class="fas  fa-plus-circle"></i>
                 </a>
-                <a href="{{ url_for('addemployee') }}" class="menuList col-10 col-sm-6 col-md-4 col-xl-3">
+                <a href="{{ url_for('addemployee') }}" class="menuList col-10 col-sm-5 col-md-4 col-xl-3">
                       <h1>Add Employee</h1> <i class="fas  fa-user-plus"></i>
                 </a>
-                <a href="{{ url_for('block') }}" class="menuList col-10 col-sm-6 col-md-4 col-xl-3">
+                <a href="{{ url_for('block') }}" class="menuList col-10 col-sm-5 col-md-4 col-xl-3">
                       <h1>Block Employee</h1> <i class="fas  fa-ban"></i>
                 </a>
-                <a href="{{ url_for('deleteuser') }}" class="menuList col-10 col-sm-6 col-md-4 col-xl-3">
+                <a href="{{ url_for('deleteuser') }}" class="menuList col-10 col-sm-5 col-md-4 col-xl-3">
                       <h1>Delete User</h1> <i class="fas  fa-trash-alt"></i>
                 </a>
-                <a href="{{ url_for('deleteemployee') }}" class="menuList col-10 col-sm-6 col-md-4 col-xl-3">
+                <a href="{{ url_for('deleteemployee') }}" class="menuList col-10 col-sm-5 col-md-4 col-xl-3">
                       <h1>Delete Employee</h1> <i class="fas  fa-trash-alt"></i>
                 </a>
-                <a href="{{ url_for('about') }}" class="menuList col-10 col-sm-6 col-md-4 col-xl-3">
+                <a href="{{ url_for('about') }}" class="menuList col-10 col-sm-5 col-md-4 col-xl-3">
                       <h1>About</h1> <i class="fas  fa-question-circle"></i>
                 </a>
-                <a href="{{ url_for('contact') }}" class="menuList col-10 col-sm-6 col-md-4 col-xl-3">
+                <a href="{{ url_for('contact') }}" class="menuList col-10 col-sm-5 col-md-4 col-xl-3">
                       <h1>Contact</h1> <i class="fas  fa-at"></i>
                 </a>
-		<a href="{{ url_for('settings') }}" class="menuList col-10 col-sm-6 col-md-4 col-xl-3">
+		<a href="{{ url_for('settings') }}" class="menuList col-10 col-sm-5 col-md-4 col-xl-3">
                       <h1>Settings</h1> <i class="fas  fa-cog"></i>
                 </a>
-                <a href="{{ url_for('logout') }}" class="menuList col-10 col-sm-6 col-md-4 col-xl-3">
+                <a href="{{ url_for('logout') }}" class="menuList col-10 col-sm-5 col-md-4 col-xl-3">
                       <h1>LogOut</h1> <i class="fas  fa-sign-out-alt"></i>
                 </a>
           </div>

@@ -1,3 +1,58 @@
-<section style="height:100px;">
+<section class="col-10 col-sm-10 col-md-8 col-xl-6" style="margin: 5% auto">
+<div class="dForm" id="addUserFrom">
+	<div class="alert alert-success" style="display:none;" role="alert">User successfully added!</div>
+	<div class="alert alert-danger" style="display:none;" role="alert">Unable to add User</div>
+	<div class="loader" style="display:none;"></div>
+	
+	<form id="valForm" class="needs-validation" novalidate>
+	  <div class="form-row">
+	    <div class="col-md-6 mb-3">
+	      <label for="fname">Full name</label>
+	      <input type="text" class="form-control" name="fname" minlength=3 id="fname" placeholder="Full name" required>
+	      <div class="invalid-feedback">
+	        Please provide The full name
+	      </div>
+	    </div>
+	    <div class="col-md-6 mb-3">
+	      <label for="card_uid">Card UID</label>
+	      <input type="text" class="form-control" disabled id="card_uid" minlength=3 name="card_uid" placeholder="Card UID" required>
+	      <div class="invalid-feedback">
+	        Please provide The Card UID
+	      </div>
+	    </div>
 
+	    <div class="col-md-6 mb-3">
+	      <label for="fdate">From Date</label>
+	      <input type="date" class="form-control" id="fdate" name="fdate" required>
+	      <div class="invalid-feedback">
+	        Please provide a valid Date.
+	      </div>
+	    </div>
+	    <div class="col-md-6 mb-3">
+	      <label for="ftime">Time</label>
+	      <input type="time" class="form-control" name="ftime" id="ftime" required step="1">
+	      <div class="invalid-feedback">
+	        Please provide a valid Time.
+	      </div>
+	    </div>
+
+	    <div class="col-md-6 mb-3">
+	      <label for="tdate">To Date</label>
+	      <input type="date" class="form-control" id="tdate" name="tdate"required>
+	      <div class="invalid-feedback">
+	        Please provide a valid Date.
+	      </div>
+	    </div>
+	    <div class="col-md-6 mb-3">
+	      <label for="ttime">Time</label>
+	      <input type="time" class="form-control" name="ttime" id="ttime" required step="1">
+	      <div class="invalid-feedback">
+	        Please provide a valid Time.
+	      </div>
+	    </div>
+	  </div>
+	 
+	  <div style="display:inline-block;" class="col-4 col-sm-8 col-md-9 col-xl-9"></div><button class="btn btn-primary" id="submit">Block User</button>
+	</form>
+</div>
 </section>

@@ -1,3 +1,67 @@
-<section style="height:100px;">
+<section class="col-10 col-sm-10 col-md-8 col-xl-6" style="margin: 5% auto">
+<div class="dForm">
+	<div class="alert alert-success" style="display:none;" role="alert">User successfully added!</div>
+	<div class="alert alert-danger" style="display:none;" role="alert">Unable to add User</div>
 
+	<div class="loader" style="display:none;"></div>
+	
+	<form id="valForm" class="needs-validation" novalidate>
+<p style="text-align: center; display:none;">Uploading image 0% ...</p>
+<div class="progress" style="display:none;">
+  <div class="progress-bar bg-success" role="progressbar" id="progBar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+	  <div class="form-row">
+	    <div class="col-md-5 mb-3">
+	      <label for="firstname">First name</label>
+	      <input type="text" class="form-control" name="firstname" minlength=3 id="firstname" placeholder="First name" required>
+	      <div class="invalid-feedback">
+	        Please provide your firstname
+	      </div>
+	    </div>
+	    <div class="col-md-6 mb-3">
+	      <label for="lastname">Last name</label>
+	      <input type="text" class="form-control" id="lastname" minlength=3 name="lastname" placeholder="Last name" required>
+	      <div class="invalid-feedback">
+	        Please provide your lastname
+	      </div>
+	    </div>
+	    <div class="col-md-11 mb-3">
+	      <label for="address">Address</label>
+	      <input type="text" class="form-control" id="address"  name="address" placeholder="full Address" required>
+	      <div class="invalid-feedback">
+	        Please provide a valid address.
+	      </div>
+	    </div>
+	    <div class="col-md-5 mb-3">
+	      <label for="username">Card Number</label>
+	      <div class="input-group">
+	        <input type="number" class="form-control" id="card" name="card_uid" minlength=6 placeholder="Card Number" required>
+	        <div class="invalid-feedback">
+	          Please choose a valid Card Number.
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</form>	
+	<form id="fFile" method="post" enctype="multipart/form-data">
+	<div class="form-row">
+	    <div class="custom-file col-md-5 mb-3">
+	     <label for="img">Employee Photo</label>
+	     <div class="input-group">
+		<label id="img_label" style="overflow: hidden;" for="img_path" class="custom-file-label">
+		    <i class="fas fa-images"></i> Choose Image
+		</label>
+		<input required class="custom-file-input"  name="img_path" id="img_path" accept=".jpg, .jpeg, .png" type="file"/>
+	       <small id="img_help" class="form-text text-muted">Files larger then 1Mb will be refused.</small>
+		<div class="invalid-feedback">
+	          Please choose a valid photo path.
+	       </div>
+	      </div>
+	     </div>
+	</div>
+	</form>
+
+	  <div style="display:inline-block;" class="col-4 col-sm-6 col-md-8 col-xl-9"></div><button id="submit" class="btn btn-primary">Add Employee</button>
+
+</div>
 </section>

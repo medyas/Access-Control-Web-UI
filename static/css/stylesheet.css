@@ -21,7 +21,8 @@ src:url("fonts/DancingScript-Regular.ttf");
 /*
 	default form styles
 */
-section #dForm {
+
+section .dForm {
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 padding: 5%;
 color: #006680;
@@ -50,23 +51,46 @@ border-color: #17A2B8;
 		font-size: 30px;
 		display: block;
 	}
-	/* auto complete menu */
-	input['type=search'] {
-		width: 100%;
+
+	/* modal styles */
+	#empInfo {
+		height: 280px;
 	}
+	#empInfo #info {
+		display: block;
+	}
+	.easy-autocomplete {
+		width: 100% !important;
+	}
+	
 	/* dashboard */
 	.filter input {
 		margin-bottom: 2%;
 	}
 	.filter {
-		height: 180px;
+		height: 200px;
+	}
+	#filter {
+		margin-left: 20px;
+	}
+
+	/* add employee */
+	.dForm {
+		height: 550px;
+	}
+	#submit {
+		margin-top: 60px;
+	}
+	/* add user form */
+	#addUserFrom {
+		height: 680px !important;
 	}
 }
 
 /* Small devices (landscape phones, less than 768px )*/
 @media screen and (min-width: 576px) and (max-width: 767px) {
 	.menuList {
-		height: 120px;
+		height: 130px;
 	}
 	.menuList h1 {
 		font-size: 25px;
@@ -74,19 +98,31 @@ border-color: #17A2B8;
 	.menuList i{
 		font-size: 35px;
 	}
-		/* dashboard */
+	/* modal styles */
+	#empInfo {
+		height: 280px;
+	}
+
+	/* dashboard */
 	.filter input {
 		margin-bottom: 2%;
 	}
 	.filter {
 		height: 150px;
 	}
+	/* add employee */
+	#dForm {
+		height: 550px;
+	}
+	#submit {
+		margin-top: 60px;
+	}
 }
 
 /* Medium devices (tablets, less than 992px) */
 @media screen and (min-width: 768px) and (max-width: 991px) {
 	.menuList {
-		height: 130px;
+		height: 150px;
 	}
 	.menuList h1 {
 		font-size: 30px;
@@ -94,6 +130,11 @@ border-color: #17A2B8;
 	.menuList i{
 		font-size: 45px;
 	}
+	/* modal styles */
+	#empInfo {
+		height: 200px;
+	}
+
 	/* dashboard */
 	.filter input {
 		margin-bottom: 2%;
@@ -114,6 +155,10 @@ border-color: #17A2B8;
 	.menuList i{
 		font-size: 50px;
 	}
+	/* modal styles */
+	#empInfo {
+		height: 200px;
+	}
 	/* dashboard */
 	.filter input {
 		margin-bottom: 1%;
@@ -123,7 +168,7 @@ border-color: #17A2B8;
 /* Large desktops */
 @media screen and (min-width: 1200px) {
 	.menuList {
-		height: 180px;
+		height: 200px;
 	}
 	.menuList h1 {
 		font-size: 34px;
@@ -131,6 +176,11 @@ border-color: #17A2B8;
 	.menuList i{
 		font-size: 60px;
 	}
+	/* modal styles */
+	#empInfo {
+		height: 180px;
+	}
+	/* dashboard */
 	.filter {
 		height: 60px;
 	}
@@ -222,14 +272,14 @@ color: white;
 .auto-item img {
 	width: 45px;
 	height: 45px;
-	display: inline !important;
+	display: inline-block !important;
 }
 .auto-item div {
-	float: right;
-	padding-right: 20%;
-	display: inline !important;
+	margin-left: 5%;
+	display: inline-block !important;
 }
 .auto-item p {
+	margin-top: 2%;
 	margin-bottom: 0px;
 }
 .auto-item span {
@@ -247,22 +297,22 @@ color: white;
 #empInfo {
 	margin: 0px auto;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-height: 180px;
+
 }
 #empInfo #img {
 	display: inline-block;
+	margin: 1%;
 }
 #img img {
-	margin-top: 0px;
 	width: 100%;
-	border-radius: 5px
 }
 #info {
 	display: inline-block;
 	padding: 15px;
+overflow: hidden;
 }
 #empInfo p {
-	margin-bottom: 5px;
+	margin-bottom: 1%;
 	margin-left: 5px;
 }
 #name {
@@ -424,6 +474,42 @@ height: 180px;
 
 #dForm label{
 	color: #006680;
+}
+
+/*
+	add Employee styles
+*/
+
+.custom-file-input {
+cursor: pointer;
+}
+
+
+
+
+/*
+	block employee styles
+*/
+.block-item {
+	width: 100%;
+}
+.block-item img {
+	width: 45px;
+	height: 45px;
+	display: inline-block !important;
+}
+.block-item div {
+	margin-left: 5%;
+	display: inline-block !important;
+}
+.block-item p {
+	margin-top: 5%;
+	margin-bottom: 0px;
+}
+.block-item span {
+	display: block;
+	color: gray;
+	font-size: 80%;
 }
 
 /*
