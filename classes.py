@@ -235,7 +235,7 @@ class dataBase:
         start_date = data[2] 
         end_date = data[3]
         current_date = datetime.datetime.strptime(datetime.datetime.today().strftime('%Y-%m-%d %H:%M:%S'), '%Y-%m-%d %H:%M:%S')
-        
+
         if(current_date >= start_date and current_date <= end_date):
             return True, start_date.strftime('%Y-%m-%d %H:%M:%S'), end_date.strftime('%Y-%m-%d %H:%M:%S')
         else:

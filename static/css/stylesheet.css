@@ -458,6 +458,7 @@ overflow: hidden;
 }
 #dashLogs table th {
 	border-bottom: 1px solid gray;
+	background-color: #f6f6f6;
 	color: #006680;
 }
 #dashLogs table tr:hover {

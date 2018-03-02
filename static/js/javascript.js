@@ -40,6 +40,7 @@ function closeNav() {
 
 $(document).on('click', '#eac-container-search ul li .auto-item', function() {
 	$('#logs table').html("<tr><th>User Id</th><th>Scan Id</th><th>Scan Date</th><th>Scan Time</th></tr>");
+	$(".easy-autocomplete #search").text('');
 	$('#empModal').modal('toggle');
 	$("#empInfo").hide();
 	$("#logs").hide();
@@ -50,6 +51,8 @@ $(document).on('click', '#eac-container-search ul li .auto-item', function() {
 		$('#empInfo #info #address').text(data.employee[0].address);
 		$('#empInfo #info #card_uid').text(data.employee[0].card_uid); 
 		$('#empInfo #info #status').text(data.block);
+		$('#empInfo #info #status').removeClass("alert-success");
+		$('#empInfo #info #status').removeClass("alert-danger");
 		$('#empInfo #info #status').addClass("alert-success");
 		if(data.block != 'Working') {
 			$('#empInfo #info #status').addClass("alert-danger");
@@ -185,6 +188,31 @@ if( path== "/dashboard/") {
 	});
 	$( "input[type='number']" ).keyup(function() {
 		findMatch($(this).val(), 2);
+	});
+	
+	$("#reset").click(function(e) {
+		e.preventDefault();
+        	e.stopPropagation();
+		$(".logsTr").show();
+		return false;
+	});
+	
+	$("#filter").on('click', function(e) {
+		e.preventDefault();
+        	e.stopPropagation();
+		$(".logsTr").show();
+		var n = new RegExp($( ".filter input[type='text']" ).val());
+		var u = new RegExp($( ".filter input[type='number']" ).val());
+		var d = new RegExp($( ".filter input[type='date']" ).val());
+		var temp;
+		$.each( $(".logsTr"), function( key, value ) {
+			temp = $.parseHTML( value.innerHTML );
+			if((temp[1].innerHTML.toLowerCase().match(n)) == null || (temp[2].innerHTML.toLowerCase().match(u)) == null || (temp[4].innerHTML.toLowerCase().match(d)) == null)
+				$(this).hide();
+			else
+				$(this).show();
+		});
+		return false;
 	});
 	
 	$(".loader").show();
