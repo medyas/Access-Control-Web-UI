@@ -194,6 +194,9 @@ if( path== "/dashboard/") {
 		e.preventDefault();
         	e.stopPropagation();
 		$(".logsTr").show();
+		$( "input[type='number']" ).val("");
+		$( "input[type='date']" ).val("");
+		$( "input[type='text']" ).val("");
 		return false;
 	});
 	
