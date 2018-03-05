@@ -106,7 +106,7 @@ def dashboard():
         return redirect(url_for('index'))
     else:
         if(request.method == 'GET'):
-            return render_template('header.html') + render_template('dashboard.html') + render_template('footer.html')
+            return render_template('header.html', name=session['username']) + render_template('dashboard.html') + render_template('footer.html')
         else:
             status, data = db.employeesLogs()
             if(status):
@@ -120,7 +120,7 @@ def about():
     if not session and not checkCookie():
         return redirect(url_for('index'))
     else:
-        return render_template('header.html') + render_template('about.html') + render_template('footer.html')
+        return render_template('header.html', name=session['username']) + render_template('about.html') + render_template('footer.html')
 
 # contact page
 @app.route('/conctact/')
@@ -128,7 +128,7 @@ def contact():
     if not session and not checkCookie():
         return redirect(url_for('index'))
     else:
-        return render_template('header.html') + render_template('contact.html') + render_template('footer.html')
+        return render_template('header.html', name=session['username']) + render_template('contact.html') + render_template('footer.html')
 
 # setting page
 @app.route('/settings/', methods=['POST',  'GET'])
@@ -136,7 +136,7 @@ def settings():
     if not session and not checkCookie():
         return redirect(url_for('index'))
     else:
-        return render_template('header.html') + render_template('settings.html') + render_template('footer.html')
+        return render_template('header.html', name=session['username']) + render_template('settings.html') + render_template('footer.html')
 
 
 # add user page
@@ -146,7 +146,7 @@ def adduser():
         return redirect(url_for('index'))
     else:
         if(request.method == 'GET'):
-            return render_template('header.html') + render_template('adduser.html') + render_template('footer.html')
+            return render_template('header.html', name=session['username']) + render_template('adduser.html') + render_template('footer.html')
         else:
             if(db.checkPermission(session['id'], 'add_per')):
                 status = db.uniqueUser(request.form['username'].lower(), request.form['email'])
@@ -227,7 +227,7 @@ def addemployee():
         return redirect(url_for('index'))
     else:
         if(request.method == 'GET'):
-            return render_template('header.html') + render_template('addemployee.html') + render_template('footer.html')
+            return render_template('header.html', name=session['username']) + render_template('addemployee.html') + render_template('footer.html')
         else:
             status = db.checkUID(request.form['card_uid'])
             if(db.checkUID(request.form['card_uid'])):
@@ -262,7 +262,7 @@ def block():
         return redirect(url_for('index'))
     else:
         if(request.method == 'GET'):
-            return render_template('header.html') + render_template('block.html') + render_template('footer.html')
+            return render_template('header.html', name=session['username']) + render_template('block.html') + render_template('footer.html')
         else:
             status, d = db.checkUID(request.form['card_uid'])
             if(not status):
@@ -296,13 +296,9 @@ def deleteuser():
         return redirect(url_for('index'))
     else:
         if(request.method == 'GET'):
-            return render_template('header.html') + render_template('deleteuser.html') + render_template('footer.html')
+            return render_template('header.html', name=session['username']) + render_template('deleteuser.html') + render_template('footer.html')
         else:
-            status, data = db.employeesLogs()
-            if(status):
-                return json.dumps(data)
-            else:
-                return ""
+            return ""
 
 # delete employee page
 @app.route('/deleteemployee/', methods=['POST',  'GET'])
@@ -310,7 +306,7 @@ def deleteemployee():
     if not session and not checkCookie():
         return redirect(url_for('index'))
     else:
-        return render_template('header.html') + render_template('deleteemployee.html') + render_template('footer.html')
+        return render_template('header.html', name=session['username']) + render_template('deleteemployee.html') + render_template('footer.html')
 
 
 # logout page

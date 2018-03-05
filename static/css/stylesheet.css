@@ -68,7 +68,7 @@ border-color: #17A2B8;
 		margin-bottom: 2%;
 	}
 	.filter {
-		height: 200px;
+		height: 210px;
 	}
 	#filter {
 		margin-left: 20px;
@@ -85,10 +85,26 @@ border-color: #17A2B8;
 	#addUserFrom {
 		height: 680px !important;
 	}
+	
+	.under-const i {
+		font-size: 600% !important;
+		margin-bottom: 5%;
+	
+	}
+	/* footer */
+	footer {
+		height: 150px !important;
+	}
 }
 
 /* Small devices (landscape phones, less than 768px )*/
 @media screen and (min-width: 576px) and (max-width: 767px) {
+	#eac-container-search li {
+		width: 220px;
+	}
+	.eac-item {
+		width: 100%;
+	}
 	.menuList {
 		height: 130px;
 	}
@@ -121,6 +137,12 @@ border-color: #17A2B8;
 
 /* Medium devices (tablets, less than 992px) */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+	#eac-container-search li {
+		width: 220px;
+	}
+	.eac-item {
+		width: 100%;
+	}
 	.menuList {
 		height: 150px;
 	}
@@ -146,6 +168,12 @@ border-color: #17A2B8;
 
 /* Large devices (desktops, less than 1200px) */
 @media screen and (min-width: 992px) and (max-width: 1199px) {
+	#eac-container-search li {
+		width: 220px;
+	}
+	.eac-item {
+		width: 100%;
+	}
 	.menuList {
 		height: 160px;
 	}
@@ -261,7 +289,7 @@ nav a {
 	border-color: white !important;
 }
 .navbar-toggler-icon {
-color: white;
+	color: white;
 }
 
 /* search auto complete styles */
@@ -287,6 +315,10 @@ color: white;
 	color: gray;
 	font-size: 80%;
 }
+.dropdown-item {
+	color: #006680 !important;
+}
+
 
 /*
 # ------------------------------------------------------------------------------- #
@@ -516,7 +548,31 @@ cursor: pointer;
 /*
 # ------------------------------------------------------------------------------- #
 */
+/*
+	under construction styles
+*/
 
+
+.under-const {
+	margin: 10% auto;
+	text-align: center;
+	width: 80%;
+	padding: 3%;
+}
+.under-const i {
+	font-size: 800%;
+	color: #1F2534;
+	
+}
+.under-const .text {
+	font-size: 200%;
+	margin-top: 5%;
+	color: #636873;
+}
+
+/*
+# ------------------------------------------------------------------------------- #
+*/
 /*
 	footer styles
 */
