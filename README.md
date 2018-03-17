@@ -1,6 +1,6 @@
 # Access-Control-Web-UI
-
-## This is part of the Access Control Desktop App, the app can be found in this Repo : [Access Control Desktop App](https://github.com/medyas/Access-Control-desktop-App)
+## This app is made to run in the Raspberry Pi, usgin Python and the Flask framework
+### This is part of the Access Control Desktop App, the app can be found in this Repo : [Access Control Desktop App](https://github.com/medyas/Access-Control-desktop-App)
 also, the full database is exported and was added to the desktop app repo, which you can import in the mysql with :
 ```
 gunzip < [dataBase.sql.gz]  | mysql -u [user] -p[password] [databasename] 
