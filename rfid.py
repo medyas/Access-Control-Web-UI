@@ -17,7 +17,7 @@ app.config.update(
     PERMANENT_SESSION_LIFETIME=datetime.timedelta(hours=1)
 )
 
-app.config['UPLOAD_FOLDER'] = '/var/www/flask/accessControl/static/imgs/'
+app.config['UPLOAD_FOLDER'] = 'static/imgs/'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
