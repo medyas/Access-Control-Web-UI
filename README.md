@@ -38,4 +38,16 @@ CREATE TABLE `blocked_employee` (
 ) 
 
 ```
+Then just eun the rfid.py file to start the Flask web server.
+```python3 rfid.py```
+open your localhost: ```http://localhost``` address in the browser and you should get the login page. either you add a user in the database(using the terminal) and login with it, or just use my old data: ```username: medyas, password: admin```.
+here are couple of images showing the web app UI:
 
+![Alt imgs](login.png?raw=true "Login page")
+![Alt imgs](dashboard.png?raw=true "dashboard page")
+![Alt imgs](model.png?raw=true "model page")
+![Alt imgs](menu.png?raw=true "menu page")
+![Alt imgs](addUser.png?raw=true "add User page")
+![Alt imgs](addEmployee.png?raw=true "add Employee page")
+![Alt imgs](block.png?raw=true "block employee page")
+![Alt imgs](underconstruction.png?raw=true "unfinishied pages")
