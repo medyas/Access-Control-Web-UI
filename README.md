@@ -1,7 +1,7 @@
 # Access-Control-Web-UI
 ## This app is made to run in the Raspberry Pi, using Python and the Flask framework
 ### This is part of the Access Control Desktop App, the app can be found in this Repo : [Access Control Desktop App](https://github.com/medyas/Access-Control-desktop-App)
-install apache2 and mod_wsgi
+install apache2 and mod_wsgi and follow this video to setup everything : https://www.youtube.com/watch?v=wq0saslschw
 ```
 sudo apt-get install apache2
 sudo apt-get install libapache2-mod-wsgi-py3
